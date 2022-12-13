@@ -1,4 +1,4 @@
-package com.trip.travel.domain;
+package com.trip.travel.vo;
 
 public enum Gender {
     MALE, FEMALE

@@ -1,14 +1,14 @@
 package com.trip.travel.vo;
 
-import lombok.Getter;
+import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-@Getter
-public class Member {
+@Data
+@Table(name = "member")
+public class MemberVo {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")
@@ -24,18 +24,9 @@ public class Member {
 
     private String profileImage;
 
-    private LocalDate birth;
-
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
     private LocalDateTime joinDate;
-
-    @Enumerated(EnumType.STRING)
-    private Authority authority;
-
-    private String region;
-
-    private boolean optional;
 
 }
